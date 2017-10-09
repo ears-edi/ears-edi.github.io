@@ -12,6 +12,15 @@ class Snake:
                 game = Snake()
             init stands for "Initialisation"
         """
+        ## UNCOMMENT AND FILL IN THE # LINES BELOW WITH START VALUES
+        ## current direction is a string with up, down, left or right
+        # self.current_direction =
+        ## snake is a list of the pixels that the snake is at
+        # self.snake = [[2, 2]]
+        ## food is the co-ords of the current food
+        # self.food =
+        ## whether or not to end the game, used after update
+        # self.end =
         pass
 
     def handle_input(self):
@@ -25,11 +34,17 @@ class Snake:
         """ This function will update the game state
             based on the direction the snake is going.
         """
+        # The line below makes a copy of the head of the snake
+        # you will be working with that copy in this function
+        # new_head = list(self.snake[-1])
         pass
 
     def draw(self):
         """ This makes the game appear on the LEDs. """
-        pass
+        display.clear()
+        display.set_pixel(self.food[0], self.food[1], 5)
+        for part in self.snake:
+            display.set_pixel(part[0], part[1], 9)
 
 # game is an "instance" of Snake
 game = Snake()
